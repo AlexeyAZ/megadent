@@ -1,0 +1,34 @@
+- var sec5List = ["Лечение", "Реставрация", "Протезирование", "Отбеливание", "Исправление прикуса"];
+
+section.sec.sec5
+    div.container
+        p.s.sec5__title.
+            Мы – лидеры рынка города Тюмень: <span class="medium">используем самое современное оборудование, технологии протезирования и лечения</span>
+        p.xl.medium.color-light-blue.sec5__subtitle.
+            Оказываем все виды стоматологических услуг:
+        div.sec5__list
+            each item,index in sec5List
+                div.sec5__list-item
+                    div.sec5__list-img-wrap
+                        img(src="img/sec6-img" + (index + 1) + ".png", alt="").sec5__list-img
+                    p.sec5__list-text.
+                        #{item}
+        div.sec5__row
+            div.sec5__col.sec5__col_img
+                img(src="img/sec6-img.jpg", alt="").sec5__img
+            div.sec5__col.sec5__col_text
+                p.xl.medium.
+                    41 000 клиентов доверяет нам уход за своими зубами:
+                p.s
+                    |это позволяет нам делать 
+                    span.bold.
+                        33 млн.рублей выручки ежегодно
+        +icon-lines("sec5__icon-lines")
+    div.sec5__decor.sec5__decor_pc
+    div.sec5__decor.sec5__decor_mobile.sec5__decor_mobile-1
+    div.sec5__decor.sec5__decor_mobile.sec5__decor_mobile-2
+    div.sec5__decor.sec5__decor_mobile.sec5__decor_mobile-3
+    +icon-lines("sec5__icon-lines-mobile sec5__icon-lines-mobile_1")
+    +icon-lines("sec5__icon-lines-mobile sec5__icon-lines-mobile_2")
+    +icon-lines("sec5__icon-lines-mobile sec5__icon-lines-mobile_3")
+    +icon-lines("sec5__icon-lines-mobile sec5__icon-lines-mobile_4")

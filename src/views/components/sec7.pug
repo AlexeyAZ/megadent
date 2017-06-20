@@ -1,0 +1,24 @@
+- var sec7List = ["Получение лицензии", "Настройка и запуск рекламы", "Найм и обучение специалистов", "Выбор и ремонт помещения", "Организация грамотного документооборота", "Открытие филиала"];
+
+section.sec.sec7
+    div.container
+        div.sec7__text
+            p.s.medium.sec7__text-title.
+                Наша франшиза состоит из документов и рекламных материалов лишь на 20%
+            p.xs.mb0
+                |Остальное – исключительная 
+                span.medium.
+                    поддержка на всех этапах работы
+        img(src="img/header-logo.png", alt="").sec7__logo
+        div.sec7__list
+            each item,index in sec7List
+                div.sec7__list-item
+                    div.sec7__list-img-wrap
+                        img(src="img/sec8-icon" + (index + 1) + ".png", alt="").sec7__list-img
+                    p.sec7__list-title.
+                        #{item}
+    div.sec7__decor.sec7__decor_left
+    div.sec7__decor.sec7__decor_right
+    div.sec7__decor.sec7__decor_mobile.sec7__decor_mobile1
+    div.sec7__decor.sec7__decor_mobile.sec7__decor_mobile2
+    div.sec7__decor.sec7__decor_mobile.sec7__decor_mobile3

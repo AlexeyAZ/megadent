@@ -1,0 +1,200 @@
+.sec4 {
+
+    @include media(w768) {
+        background-image: url("../img/sec4-bg1.jpg");
+
+        &:before {
+            content: "";
+            background-color: $main-blue;
+            opacity: 0.82;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__top {
+        background-image: url("../img/sec4-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &:before {
+            content: "";
+            background-color: $main-blue;
+            opacity: 0.82;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+
+            @include media(w768) {
+                content: none;
+            }
+        }
+
+        @include media(w768) {
+            background-image: none;
+        }
+    }
+
+    &__top-content {
+        padding: 140px calc(50% + 10px) 150px 0;
+        position: relative;
+        z-index: 2;
+
+        @include media(w1024) {
+            padding: 100px calc(50% + 10px) 100px 0;
+        }
+
+        @include media(w768) {
+            padding: 30px 0 50px;
+        }
+    }
+
+    &__icon-lines {
+        transform: rotate(45deg) translateY(-60%);
+        position: absolute;
+        top: 0;
+        left: 6%;
+    }
+
+    &__bottom {
+        background-color: $blue-bg;
+        padding: 40px 0 60px;
+        position: relative;
+
+        @include media(w1024) {
+            margin-bottom: 0;
+            padding: 30px 0 40px;
+        }
+
+        @include media(w768) {
+            background-color: transparent;
+            padding: 0 0 50px;
+            color: white;
+        }
+    }
+
+    &__bottom-row {
+        display: flex;
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
+    &__bottom-col {
+        padding-right: 30px;
+        width: 50%;
+        
+        @include media(w768) {
+            padding-right: 0;
+            width: auto;
+        }
+    }
+
+    &__bottom-text {
+
+        @include media(w768) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__bottom-btn {
+        position: relative;
+        z-index: 4;
+
+        @include media(w768) {
+            background-color: white;
+            color: $main-blue;
+
+            &:hover {
+                background-color: $main-blue;
+                color: white;
+            }
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        bottom: 3%;
+        right: 0;
+        height: 200px;
+        width: 10%;
+        z-index: 2;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+        }
+
+        &:after {
+            transform: skew(30deg) rotate(30deg);
+            background-color: $decor-cyan;
+            right: 0;
+            height: 100%;
+            width: 80%;
+        }
+
+        &:before {
+            transform: skew(-30deg) rotate(-30deg);
+            background-color: $decor-light-blue;
+            top: 58%;
+            right: 20%;
+            height: 55%;
+            width: 80%;
+        }
+
+        @include media(w1024) {
+            height: 120px;
+        }
+
+        @include media(w768) {
+            height: 100px;
+            bottom: auto;
+            top: -30px;
+
+            &:after {
+                background-color: white;
+                height: 60%;
+            }
+
+            &:before {
+                background-color: $decor-cyan;
+                right: 0;
+                top: 60%;
+                width: 20%;
+            }
+        }
+    }
+
+    &__bottom-icon-lines {
+        transform: rotate(45deg);
+        position: absolute;
+        right: 10%;
+        bottom: 10%;
+        z-index: 2;
+
+        @include media(w768) {
+            transform: rotate(45deg) translateY(60%);
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &__icon-lines {
+
+        @include media(w768) {
+            top: 48%;
+            left: -30px;
+            height: 60px;
+            width: 10px;
+        }
+    }
+}

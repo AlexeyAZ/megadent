@@ -1,0 +1,261 @@
+.sec7 {
+    background-image: url("../img/sec8-bg.jpg");
+    padding: 100px 0 80px;
+
+    @include media(w1024) {
+        padding: 60px 0 40px;
+    }
+
+    @include media(w768) {
+        background-image: none;
+        padding: 0 0 30px;
+    }
+    
+    &__text {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-left: 6px solid $decor-light-blue;
+        margin-bottom: 80px;
+        padding: 0 50% 0 20px;
+
+        @include media(w768) {
+            background-image: url("../img/sec8-bg.jpg");
+            border: none;
+            margin-left: -$container-side-padding-tablet;
+            margin-right: -$container-side-padding-tablet;
+            margin-bottom: 40px;
+            padding: 100px $container-side-padding-tablet;
+        }
+    }
+
+    &__logo {
+        max-width: 226px;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        z-index: 1;
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: wrap;
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
+    &__list-item {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0 10px;
+        width: calc(100% / 3);
+
+        @include media(w1024) {
+            font-size: 14px;
+        }
+
+        @include media(w768) {
+            font-size: 26px;
+            margin-bottom: 50px;
+            width: auto;
+        }
+    }
+
+    &__list-img-wrap {
+        height: 100px;
+
+        @include media(w1024) {
+            height: 80px;
+        }
+    }
+
+    &__list-img {
+        max-height: 80%;
+    }
+
+    &__decor {
+        position: absolute;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+        }
+
+        &_left {
+            left: 0;
+            top: 38%;
+            height: 200px;
+            width: 14%;
+
+            &:after {
+                transform: skew(-30deg) rotate(-30deg);
+                background-color: $decor-cyan;
+                top: 0;
+                left: 0;
+                height: 55%;
+                width: 50%;
+            }
+
+            @include media(w768) {
+                left: auto;
+                right: 0;
+                top: 30%;
+                height: 100px;
+                width: 6%;
+
+                &:after {
+                    transform: skew(-30deg) rotate(-30deg);
+                    background-color: $decor-cyan;
+                    top: 0;
+                    right: 0;
+                    height: 55%;
+                    width: 100%;
+                }
+            }
+        }
+
+        &_right {
+            top: 54px;
+            right: 0;
+            height: 200px;
+            width: 14%;
+
+            &:before {
+                transform: skew(30deg) rotate(30deg);
+                background-color: white;
+                right: 0;
+                height: 90%;
+                width: 100%;
+            }
+
+            &:after {
+                transform: skew(-30deg) rotate(-30deg);
+                background-color: $decor-cyan;
+                top: 0;
+                right: 0;
+                height: 55%;
+                width: 50%;
+            }
+
+            @include media(w768) {
+                top: 40px;
+                right: 0;
+                height: 200px;
+                width: 5%;
+
+                &:before {
+                    transform: skew(30deg) rotate(30deg);
+                    background-color: $decor-cyan;
+                    right: 0;
+                    height: 30%;
+                    width: 100%;
+                }
+
+                &:after {
+                    transform: skew(-30deg) rotate(-30deg);
+                    background-color: $decor-light-blue;
+                    top: 50%;
+                    right: 0;
+                    height: 20%;
+                    width: 30%;
+                }
+            }
+        }
+
+        &_mobile {
+            display: none;
+
+            @include media(w768) {
+                display: block;
+            }
+        }
+
+        &_mobile1 {
+            top: 14%;
+            left: 0;
+            height: 200px;
+            width: 6%;
+
+            &:after {
+                transform: skew(30deg) rotate(30deg);
+                background-color: $decor-cyan;
+                left: 0;
+                height: 28%;
+                width: 50%;
+            }
+
+            &:before {
+                transform: skew(-30deg) rotate(-30deg);
+                background-color: $decor-blue;
+                top: 20%;
+                left: 0;
+                height: 20%;
+                width: 100%;
+            }
+        }
+
+        &_mobile2 {
+            top: 55%;
+            right: 0;
+            height: 200px;
+            width: 6%;
+
+            &:after {
+                transform: skew(30deg) rotate(30deg);
+                background-color: $decor-blue;
+                right: 0;
+                height: 28%;
+                width: 50%;
+            }
+
+            &:before {
+                transform: skew(-30deg) rotate(-30deg);
+                background-color: $decor-cyan;
+                top: 25%;
+                right: 0;
+                height: 20%;
+                width: 100%;
+            }
+        }
+
+        &_mobile3 {
+            bottom: 2%;
+            left: 0;
+            height: 200px;
+            width: 7%;
+
+            &:after {
+                transform: skew(30deg) rotate(30deg);
+                background-color: $decor-cyan;
+                left: 0;
+                height: 28%;
+                width: 40%;
+            }
+
+            &:before {
+                transform: skew(-30deg) rotate(-30deg);
+                background-color: $decor-light-blue;
+                top: 12%;
+                left: 0;
+                height: 20%;
+                width: 100%;
+            }
+        }
+
+        @include media(w1024) {
+            display: none;
+        }
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+}

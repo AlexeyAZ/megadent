@@ -1,0 +1,147 @@
+$icon-download-vert-width: 2px;
+
+$icon-download-vert-height: 30px;
+$icon-download-vert-height-tablet: 20px;
+
+$icon-download-horizon-width: 28px;
+$icon-download-horizon-width-tablet: 16px;
+$icon-download-horizon-height: 2px;
+
+.icon-download {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    width: $icon-download-horizon-width;
+
+    &:after {
+        content: "";
+        transition: $trans;
+        background-color: $main-blue;
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        height: $icon-download-horizon-height;
+        width: 100%;
+
+        @include media (w1024) {
+            bottom: 3px;
+        }
+    }
+
+    &__inner {
+        transition: $trans;
+        background-color: $main-blue;
+        display: inline-block;
+        position: relative;
+        height: $icon-download-vert-height;
+        width: $icon-download-vert-width;
+
+        &:before,
+        &:after {
+            content: "";
+            transition: $trans;
+            background-color: $main-blue;
+            position: absolute;
+            bottom: 0;
+            height: 16px;
+            width: 2px;
+
+            @include media (w1024) {
+                height: 10px;
+            }
+        }
+
+        &:before {
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+            left: 0;
+        }
+
+        &:after {
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+            right: 0;
+        }
+
+        @include media (w1024) {
+            height: $icon-download-vert-height-tablet;
+        }
+    }
+
+    &_white {
+
+        &:after {
+            background-color: white;
+        }
+
+        .icon-download__inner {
+            background-color: white;
+
+            &:before,
+            &:after {
+                background-color: white;
+            }
+        }
+    }
+
+    @include media (w1024) {
+        width: $icon-download-horizon-width-tablet;
+    }
+
+    @include media (w768) {
+        display: none;
+    }
+}
+
+.icon-lines {
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    width: 26px;
+
+    &:before,
+    &:after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 2px;
+
+        @include media(w1024) {
+            width: 1px;
+        }
+    }
+
+    &:before {
+        transform: translateY(-6px);
+        left: 0;
+    }
+
+    &:after {
+        transform: translateY(-16px);
+        right: 0;
+    }
+
+    &__inner {
+        background-color: white;
+        position: absolute;
+        left: calc(50% - 1px);
+        height: 100%;
+        width: 2px;
+
+        @include media(w1024) {
+            width: 1px;
+        }
+    }
+
+    @include media(w1024) {
+        height: 125px;
+        width: 16px;
+    }
+
+    @include media(w1024) {
+        height: 80px;
+        width: 12px;
+    }
+}

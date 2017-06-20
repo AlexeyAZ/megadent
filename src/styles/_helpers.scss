@@ -1,0 +1,66 @@
+.ta-center {
+    text-align: center;
+}
+
+.tt-uppercase {
+    text-transform: uppercase;
+}
+
+.ff-geometria {
+    font-family: "Geometria", Arial, Helvetica, sans-serif;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-black {
+    color: black;
+}
+
+.color-gray {
+    color: $main-gray;
+}
+
+.color-light-blue {
+    color: $decor-light-blue;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mb1 {
+    margin-bottom: 1em;
+}
+
+.mb2 {
+    margin-bottom: 2em;
+}
+
+.br-pc {
+
+    @include media(w768) {
+        display: none;
+    }
+}
+
+.br-phone {
+    display: none;
+
+    @include media(w768) {
+        display: inline;
+    }
+}

@@ -1,0 +1,13 @@
+header.header
+    div.container.header__container
+        div.header__item
+            a(href="/").header__logo
+                img(src="img/header-logo.png", alt="").header__logo-img
+        div.header__item
+            p.xs.color-white.
+                730 000 рублей<br> в месяц на голливудских улыбках
+        div.header__item.header__item_contacts
+            a(href="tel:" + attrPhone)&attributes({'data-phone': attrPhone}).header__link.phone.phone_white.
+                #{phone}
+            a(href="").header__link.link.link_getcall.js-small-btn.
+                Заказать звонок

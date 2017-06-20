@@ -1,0 +1,26 @@
+section.sec.sec1
+    //include header
+    div.container.color-white
+        div.sec1__row
+            div.sec1__col.sec1__col_left
+                div.sec1__logo
+                    img(src="img/header-logo.png", alt="").sec1__logo-img
+            div.sec1__col.sec1__col_right
+                div.sec1__info
+                    div.sec1__info-title.
+                        730 000 рублей<br class="br-pc"> в месяц<br class="br-phone"> на голливудских улыбках
+                    div.sec1__info-contacts
+                        a(href="tel:" + attrPhone)&attributes({'data-phone': attrPhone}).phone.
+                            #{phone}
+                        a(href="").link.link_getcall.js-small-btn.
+                            Заказать звонок
+                p.xs.mb1.
+                    Откройте ультрасовременную стоматологию
+                p.bold.m.ff-geometria.sec1__title.
+                    Заработайте на лечении, отбеливании и имплантации зубов 8 млн рублей в первый год
+                p.xs.mb1.sec1__subtitle.
+                    Узнайте детали открытия бизнеса из презентации: 
+                button.btn-round.js-small-btn
+                    |Скачать презентацию
+                    +icon-download
+                +icon-lines("sec1__icon-lines")

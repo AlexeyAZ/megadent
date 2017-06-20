@@ -1,0 +1,25 @@
+.phone {
+    background-position: left center;
+    background-repeat: no-repeat;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    text-decoration: none;
+
+    @include media(w1280) {
+        font-size: 20px;
+    }
+
+    @include media(w1024) {
+        font-size: 13px;
+    }
+
+    @include media(w768) {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    // @include media(w768) {
+    //     font-size: 15px;
+    // }
+}

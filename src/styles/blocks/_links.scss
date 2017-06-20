@@ -1,0 +1,29 @@
+a {
+    display: inline-block;
+    transition: $trans;
+}
+
+.link {
+    text-decoration: none;
+
+    &_getcall {
+        border-bottom: 2px dotted currentColor;
+        color: white;
+        font-size: 18px;
+
+        @include media(w1280) {
+            font-size: 16px;
+        }
+
+        @include media(w1024) {
+            font-size: 9px;
+        }
+
+        @include media(w768) {
+            border: 3px solid white;
+            padding: 10px 30px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}

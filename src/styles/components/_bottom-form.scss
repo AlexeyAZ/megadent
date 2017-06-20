@@ -1,0 +1,23 @@
+.bottom-form-container {
+
+}
+.bottom-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+
+    &__label {
+        display: block;
+
+        @include media (w768) {
+            
+        }
+
+    }
+
+    &__btn {
+
+   
+    }
+}

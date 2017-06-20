@@ -1,0 +1,169 @@
+.sec2 {
+    background-color: $blue-bg;
+    overflow: hidden;
+    padding-top: 60px;
+    
+    &__row {
+        display: flex;
+        position: relative;
+        z-index: 2;
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
+    &__col {
+        width: 50%;
+
+        &_left {
+            //padding-top: 40px;
+        }
+
+        @include media(w768) {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        margin-bottom: 50px;
+        width: 100%;
+
+        @include media(w768) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__bottom {
+        background-image: url("../img/sec2-bottom-bg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 60px 0;
+        position: relative;
+
+        @include media(w768) {
+            padding: 30px 0;
+        }
+    }
+
+    &__bottom-row {
+        display: flex;
+
+        @include media(w768) {
+            flex-flow: column;
+        }
+    }
+
+    &__bottom-col {
+        padding: 0 20px;
+        width: 50%;
+
+        @include media(w768) {
+            margin-bottom: 20px;
+            width: 100%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__bottom-img {
+
+        @include media(w768) {
+            max-width: 40px;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        bottom: 14%;
+        right: 86%;
+        height: 400px;
+        width: 400px;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+        }
+
+        &:after {
+            transform: skew(20deg) rotate(20deg);
+            background-color: $decor-cyan;
+            left: -15%;
+            height: 40%;
+            width: 100%;
+        }
+
+        &:before {
+            transform: skew(-30deg) rotate(-30deg);
+            background-color: $decor-blue;
+            top: 60%;
+            height: 30%;
+            width: 100%;
+        }
+
+        @include media(w1024) {
+            right: auto;
+            left: -250px;
+            height: 300px;
+            width: 300px;
+        }
+
+        @include media(w768) {
+            display: none;
+        }
+    }
+
+    &__decor-mobile {
+        display: none;
+        position: absolute;
+        bottom: 95%;
+        right: 0;
+        height: 100px;
+        width: 60px;
+        z-index: 2;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+        }
+
+        &:after {
+            transform: skew(30deg) rotate(30deg);
+            background-color: $decor-cyan;
+            right: 0;
+            height: 50%;
+            width: 80%;
+        }
+
+        &:before {
+            transform: skew(-30deg) rotate(-30deg);
+            background-color: $decor-blue;
+            top: 40%;
+            height: 30%;
+            width: 100%;
+        }
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
+    &__icon-lines {
+        transform: rotate(45deg) translateY(-60%);
+        position: absolute;
+        top: 0;
+        right: 20%;
+        z-index: 2;
+
+        @include media(w768) {
+            right: 100px;
+            top: auto;
+            bottom: 85%;
+        }
+    }
+}
