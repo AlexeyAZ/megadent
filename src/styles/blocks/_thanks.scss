@@ -1,46 +1,47 @@
 .thanks {
     background-image: url("../img/sec1-bg.jpg");
-    padding-top: 30px;
-    padding-bottom: 160px;
+    // padding-top: 30px;
+    // padding-bottom: 160px;
 
-    @include media(w1024) {
-        padding-bottom: 200px;
+    // @include media(w1024) {
+    //     padding-bottom: 200px;
+    // }
+
+    &__info {
+        margin-bottom: 5em;
+
+        @include media(w768) {
+            margin-bottom: 3em;
+        }
+    }
+
+    &__col-right {
+        padding-bottom: 150px;
+
+        @include media(w768) {
+            padding-bottom: 30px;
+        }
     }
 
     &__heading {
-        border-bottom: 2px solid white;
-        font-weight: 800;
-        font-size: 75px;
-        padding-bottom: 0.4em;
+        font-size: 50px;
+        padding-bottom: 1em;
 
         @include media(w1024) {
-            font-size: 50px;
+            font-size: 40px;
         }
 
         @include media(w768) {
-            font-size: 40px;
+            font-size: 30px;
         }
     }
 
     &__title {
-        font-size: 58px;
+        font-size: 28px;
         margin-bottom: 1em;
 
         @include media(w1024) {
-            font-size: 40px;
-        }
-
-        @include media(w768) {
-            font-size: 30px;
-        }
-    }
-
-    &__subtitle {
-        font-size: 38px;
-        margin-bottom: 1em;
-
-        @include media(w1024) {
-            font-size: 30px;
+            font-size: 24px;
         }
 
         @include media(w768) {
@@ -48,15 +49,45 @@
         }
     }
 
+    &__subtitle {
+        font-size: 30px;
+        margin-bottom: 2em;
+
+        @include media(w1024) {
+            font-size: 26px;
+        }
+
+        @include media(w768) {
+            font-size: 22px;
+        }
+    }
+
     &__buttons {
-        display: flex;
+        //display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 auto 30px;
+        position: relative;
         width: 100%;
 
         @include media(w768) {
             flex-direction: column;
+        }
+    }
+
+    &__buttons-btn {
+        
+        &_back {
+            position: absolute;
+            top: 0;
+            right: calc(100% + 80px);
+            white-space: nowrap;
+        }
+
+        @include media(w768) {
+            position: static;
+            justify-content: center;
+            margin-bottom: 20px;
         }
     }
 

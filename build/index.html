@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Мегадент</title>
-    <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
@@ -16,9 +16,14 @@
         <p class="form__heading">Оставьте заявку на презентацию франшизы</p>
         <form class="form" id="smallForm" data-next="#bigForm">
           <input class="form__input" type="text" name="name" placeholder="Ваше имя" required="">
-          <input class="form__input" type="text" name="phone" placeholder="Ваш телефон" required="">
+          <input class="form__input input_phone" type="text" name="phone" placeholder="Ваш телефон" required="">
           <input class="form__input" type="email" name="email" placeholder="Ваш email" required="">
-          <button class="btn-round form__btn form__btn_size js-big-btn">Скачать</button>
+          <button class="btn-round btn-round_blue form__btn form__btn_size js-big-btn">Скачать</button><br><br>
+          <div>
+            <label>
+              <input type="checkbox" checked required><span class="form__security-text">Нажимая кнопку «Скачать», я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+            </label>
+          </div>
         </form>
       </div>
     </div>
@@ -54,7 +59,12 @@
               <option value="3 000 000">Более 3 000 000 рублей</option>
             </select>
           </label>
-          <button class="btn-round form__btn form__btn_center">Получить предложение</button>
+          <button class="btn-round btn-round_blue form__btn form__btn_center form__btn_big">Проверить</button><br><br>
+          <div>
+            <label>
+              <input type="checkbox" checked required><span class="form__security-text">Нажимая кнопку «Скачать», я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+            </label>
+          </div>
         </form>
       </div>
     </div>
@@ -67,11 +77,11 @@
           </div>
           <div class="sec1__col sec1__col_right">
             <div class="sec1__info">
-              <div class="sec1__info-title">730 000 рублей<br class="br-pc"> в месяц<br class="br-phone"> на голливудских улыбках</div>
-              <div class="sec1__info-contacts"><a class="phone" href="tel:89375260820" data-phone="89375260820">8 937 526-08-20</a><a class="link link_getcall js-small-btn" href="">Заказать звонок</a></div>
+              <div class="sec1__info-title">730 000 рублей<br class="br-pc"> <span>в месяц<br class="br-phone"> на голливудских улыбках</span></div>
+              <div class="sec1__info-contacts"><a class="phone" href="tel:83452752525" data-phone="83452752525">+7 (3452) 75-25-25</a><a class="link link_getcall js-small-btn" href="">Заказать звонок</a></div>
             </div>
             <p class="xs mb1">Откройте ультрасовременную стоматологию</p>
-            <p class="bold m ff-geometria sec1__title">Заработайте на лечении, отбеливании и имплантации зубов 8 млн рублей в первый год</p>
+            <p class="bold m ff-geometria sec1__title">Заработайте на лечении, отбеливании и имплантации зубов 8 млн рублей уже в первый год</p>
             <p class="xs mb1 sec1__subtitle">Узнайте детали открытия бизнеса из презентации: </p>
             <button class="btn-round js-small-btn">Скачать презентацию<span class="icon-download"><span class="icon-download__inner"></span></span>
             </button><span class="sec1__icon-lines icon-lines"><span class="icon-lines__inner"></span></span>
@@ -85,25 +95,25 @@
           <div class="sec2__col sec2__col_left">
             <p class="xl medium mb0">Белоснежная улыбка</p>
             <p class="xs mb2">визитная карточка современного человека</p>
-            <p class="xs color-gray">Мода на голливудскую улыбку и повышение качества стоматологических услуг в России увеличивает <span class="color-black medium">динамику развития отрасли:</span></p>
+            <p class="xs color-gray sec2__col-text">Мода на голливудскую улыбку и повышение<br> качества стоматологических услуг в России<br> увеличивает <span class="color-black medium">динамику развития отрасли:</span></p>
           </div>
           <div class="sec2__col"><img class="sec2__img" src="img/sec2-img.jpg" alt=""></div>
         </div>
       </div>
       <div class="sec2__bottom">
-        <div class="sec2__decor-mobile"></div><span class="sec2__icon-lines icon-lines"><span class="icon-lines__inner"></span></span>
+        <div class="sec__decor sec2__decor-mobile"></div><span class="sec2__icon-lines icon-lines"><span class="icon-lines__inner"></span></span>
         <div class="container ta-center">
           <div class="sec2__bottom-row">
             <div class="sec2__bottom-col"><img class="sec2__bottom-img" src="img/sec2-icon1.png" alt="">
-              <p class="xs mb0">Стоимостной объем рынка стоматологии в 2011–2015 гг. увеличился на 77,6%, и достиг 379 млрд. руб.</p>
+              <p class="xs mb0">Стоимостной объем рынка стоматологии<br> в 2011–2015 гг. увеличился на 77,6%,<br> и достиг 379 млрд. руб.</p>
             </div>
             <div class="sec2__bottom-col"><img class="sec2__bottom-img" src="img/sec2-icon2.png" alt="">
-              <p class="xs mb0">А в 2016 году общее количество приёмов у стоматологов России достигнет отметки в 220,9 млн.</p>
+              <p class="xs mb0">А в 2016 году общее количество приёмов<br> у стоматологов России<br> достигнет отметки в 220,9 млн.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="sec2__decor"></div>
+      <div class="sec__decor sec2__decor"></div>
     </section>
     <section class="sec sec3">
       <div class="container">
@@ -122,14 +132,14 @@
           </div>
         </div>
       </div>
-      <div class="sec3__decor"></div>
+      <div class="sec__decor sec3__decor"></div>
     </section>
     <section class="sec sec4">
       <div class="sec4__top">
         <div class="container color-white">
           <div class="sec4__top-content">
-            <p class="m medium">Новаторская сеть клиник «Мега Дент»</p>
-            <p class="s mb0">задаёт планку качества стоматологических услуг с 2007 года</p>
+            <p class="m medium">Новаторская сеть клиник<br> «Мега-Дент»</p>
+            <p class="s mb0">задаёт планку качества стоматологических<br> услуг с 2007 года</p>
           </div>
         </div>
       </div>
@@ -146,11 +156,11 @@
           </div>
         </div>
       </div>
-      <div class="sec4__decor"></div><span class="sec4__bottom-icon-lines icon-lines"><span class="icon-lines__inner"></span></span><span class="sec4__icon-lines icon-lines"><span class="icon-lines__inner"></span></span>
+      <div class="sec__decor sec4__decor"></div><span class="sec4__bottom-icon-lines icon-lines"><span class="icon-lines__inner"></span></span><span class="sec4__icon-lines icon-lines"><span class="icon-lines__inner"></span></span>
     </section>
     <section class="sec sec5">
       <div class="container">
-        <p class="s sec5__title">Мы — лидеры рынка города Тюмень: <span class="medium">используем самое современное оборудование, технологии протезирования и лечения</span></p>
+        <p class="s sec5__title">Мы — лидеры рынка города Тюмень:<br> <span class="medium">используем самое современное оборудование,<br> технологии протезирования и лечения</span></p>
         <p class="xl medium color-light-blue sec5__subtitle">Оказываем все виды стоматологических услуг:</p>
         <div class="sec5__list">
           <div class="sec5__list-item">
@@ -163,41 +173,45 @@
           </div>
           <div class="sec5__list-item">
             <div class="sec5__list-img-wrap"><img class="sec5__list-img" src="img/sec6-img3.png" alt=""></div>
-            <p class="sec5__list-text">Протезирование</p>
+            <p class="sec5__list-text">Проте- зирование</p>
           </div>
           <div class="sec5__list-item">
             <div class="sec5__list-img-wrap"><img class="sec5__list-img" src="img/sec6-img4.png" alt=""></div>
-            <p class="sec5__list-text">Отбеливание</p>
+            <p class="sec5__list-text">Имплантация</p>
           </div>
           <div class="sec5__list-item">
             <div class="sec5__list-img-wrap"><img class="sec5__list-img" src="img/sec6-img5.png" alt=""></div>
+            <p class="sec5__list-text">Отбеливание</p>
+          </div>
+          <div class="sec5__list-item">
+            <div class="sec5__list-img-wrap"><img class="sec5__list-img" src="img/sec6-img6.png" alt=""></div>
             <p class="sec5__list-text">Исправление прикуса</p>
           </div>
         </div>
         <div class="sec5__row">
           <div class="sec5__col sec5__col_img"><img class="sec5__img" src="img/sec6-img.jpg" alt=""></div>
           <div class="sec5__col sec5__col_text">
-            <p class="xl medium">41 000 клиентов доверяет нам уход за своими зубами:</p>
-            <p class="s">это позволяет нам делать <span class="bold">33 млн.рублей выручки ежегодно</span></p>
+            <p class="xl medium">41 000 клиентов доверяет нам<br> уход за своими зубами:</p>
+            <p class="s">это позволяет нам делать <span class="bold">33 млн рублей<br> выручки ежегодно</span></p>
           </div>
         </div><span class="sec5__icon-lines icon-lines"><span class="icon-lines__inner"></span></span>
       </div>
-      <div class="sec5__decor sec5__decor_pc"></div>
-      <div class="sec5__decor sec5__decor_mobile sec5__decor_mobile-1"></div>
-      <div class="sec5__decor sec5__decor_mobile sec5__decor_mobile-2"></div>
-      <div class="sec5__decor sec5__decor_mobile sec5__decor_mobile-3"></div><span class="sec5__icon-lines-mobile sec5__icon-lines-mobile_1 icon-lines"><span class="icon-lines__inner"></span></span><span class="sec5__icon-lines-mobile sec5__icon-lines-mobile_2 icon-lines"><span class="icon-lines__inner"></span></span><span class="sec5__icon-lines-mobile sec5__icon-lines-mobile_3 icon-lines"><span class="icon-lines__inner"></span></span><span class="sec5__icon-lines-mobile sec5__icon-lines-mobile_4 icon-lines"><span class="icon-lines__inner"></span></span>
+      <div class="sec__decor sec5__decor sec5__decor_pc"></div>
+      <div class="sec__decor sec5__decor sec5__decor_mobile sec5__decor_mobile-1"></div>
+      <div class="sec__decor sec5__decor sec5__decor_mobile sec5__decor_mobile-2"></div>
+      <div class="sec__decor sec5__decor sec5__decor_mobile sec5__decor_mobile-3"></div><span class="sec5__icon-lines-mobile sec5__icon-lines-mobile_1 icon-lines"><span class="icon-lines__inner"></span></span><span class="sec5__icon-lines-mobile sec5__icon-lines-mobile_2 icon-lines"><span class="icon-lines__inner"></span></span><span class="sec5__icon-lines-mobile sec5__icon-lines-mobile_3 icon-lines"><span class="icon-lines__inner"></span></span><span class="sec5__icon-lines-mobile sec5__icon-lines-mobile_4 icon-lines"><span class="icon-lines__inner"></span></span>
     </section>
     <section class="sec sec6">
       <div class="container color-white ta-center">
         <p class="xl medium mb0">В 2017 году мы откроем ещё 15 филиалов по России</p>
-        <p class="s mb0">— станьте хозяином клиники «Мега Дент» в вашем городе!</p>
+        <p class="s mb0">— станьте хозяином клиники «Мега-Дент» в вашем городе!</p>
       </div>
     </section>
     <section class="sec sec7">
       <div class="container">
         <div class="sec7__text">
           <p class="s medium sec7__text-title">Наша франшиза состоит из документов и рекламных материалов лишь на 20%</p>
-          <p class="xs mb0">Остальное — исключительная <span class="medium">поддержка на всех этапах работы</span></p>
+          <p class="xs mb0">Остальное — исключительная <span class="medium">поддержка на всех этапах работы:</span></p>
         </div><img class="sec7__logo" src="img/header-logo.png" alt="">
         <div class="sec7__list">
           <div class="sec7__list-item">
@@ -226,17 +240,17 @@
           </div>
         </div>
       </div>
-      <div class="sec7__decor sec7__decor_left"></div>
-      <div class="sec7__decor sec7__decor_right"></div>
-      <div class="sec7__decor sec7__decor_mobile sec7__decor_mobile1"></div>
-      <div class="sec7__decor sec7__decor_mobile sec7__decor_mobile2"></div>
-      <div class="sec7__decor sec7__decor_mobile sec7__decor_mobile3"></div>
+      <div class="sec__decor sec7__decor sec7__decor_left"></div>
+      <div class="sec__decor sec7__decor sec7__decor_right"></div>
+      <div class="sec__decor sec7__decor sec7__decor_mobile sec7__decor_mobile1"></div>
+      <div class="sec__decor sec7__decor sec7__decor_mobile sec7__decor_mobile2"></div>
+      <div class="sec__decor sec7__decor sec7__decor_mobile sec7__decor_mobile3"></div>
     </section>
     <section class="sec sec8">
       <div class="container color-white">
         <div class="sec8__row">
           <div class="sec8__col">
-            <p class="s sec8__subtitle">Бизнес-модель нашей компании доказала свою эффективность уже в четырёх филиалах</p>
+            <p class="s sec8__subtitle">Бизнес-модель нашей компании<br> доказала свою эффективность<br> уже в четырёх филиалах</p>
             <p class="xl medium sec8__title">У вас всё получится!</p>
           </div>
           <div class="sec8__col">
@@ -245,13 +259,13 @@
             </button>
           </div>
         </div><span class="sec8__icon-lines icon-lines"><span class="icon-lines__inner"></span></span><span class="sec8__icon-lines-mobile icon-lines"><span class="icon-lines__inner"></span></span>
-        <div class="sec8__decor"></div>
+        <div class="sec__decor sec8__decor"></div>
       </div>
     </section>
     <section class="sec sec9">
       <div class="container">
         <div class="sec9__heading">
-          <p class="xl">Для открытия стоматологической клиники под брендом «Мега Дент» вам потребуется <span class="medium">1 млн рублей паушального взноса</span></p>
+          <p class="xl">Для открытия стоматологической клиники под брендом «Мега-Дент» вам потребуется <span class="medium">1 млн рублей паушального взноса</span></p>
           <p class="xl color-light-blue medium">и от 20 млн рублей на:</p>
         </div>
         <div class="sec9__row">
@@ -264,57 +278,111 @@
               </div>
               <div class="sec9__images"><img class="sec9__img sec9__img_top" src="img/sec9-img1.jpg" alt=""><img class="sec9__img sec9__img_bottom" src="img/sec9-img2.jpg" alt=""></div>
               <p class="s mb1 ta-center sec9__btn-title">Скачать таблицу затрат и доходов</p>
-              <button class="btn-round btn-round_blue js-small-btn sec9__bottom-btn">Скачать презентацию<span class="icon-download_white icon-download"><span class="icon-download__inner"></span></span>
+              <button class="btn-round btn-round_blue js-small-btn sec9__bottom-btn">Скачать таблицу<span class="icon-download_white icon-download"><span class="icon-download__inner"></span></span>
               </button>
             </div>
           </div>
           <div class="sec9__col sec9__col_photo"><img class="sec9__img sec9__img_top" src="img/sec9-img1.jpg" alt=""><img class="sec9__img sec9__img_bottom" src="img/sec9-img2.jpg" alt=""></div>
         </div>
       </div>
-      <div class="sec9__decor sec9__decor_1"></div>
-      <div class="sec9__decor sec9__decor_2"></div>
+      <div class="sec__decor sec9__decor sec9__decor_1"></div>
+      <div class="sec__decor sec9__decor sec9__decor_2"></div>
     </section>
     <section class="sec sec10">
       <div class="container">
-        <div class="bottom-form-container" id="bottomFormContainer">
-          <form class="bottom-form" data-next="#bigForm" id="bottomForm">
-            <label class="bottom-form__label">
-              <input class="input input_city" type="text" name="city" placeholder="Ваш город" required>
-            </label>
-            <label class="bottom-form__label">
-              <input class="input input_phone" type="text" name="phone" placeholder="Телефон" required>
-            </label>
-            <label class="bottom-form__label">
-              <input class="input" type="email" name="email" placeholder="E-mail" required>
-            </label>
-            <button class="btn-round bottom-form__btn">Проверить</button>
-          </form>
+        <div class="sec10__row">
+          <div class="sec10__col sec10__col_border color-white">
+            <p class="s mb2">Готовы открыть бизнес, которому не страшны кризисы и сезонность?</p>
+            <div class="sec10__border"><span class="sec10__icon-lines sec10__icon-lines_border icon-lines"><span class="icon-lines__inner"></span></span>
+              <p class="xl medium">Станьте владельцем цифровой стоматологии и заработайте 600 000 рублей</p>
+              <p class="s">уже в первый месяц после открытия</p>
+            </div><span class="sec10__icon-lines sec10__icon-lines_bottom icon-lines"><span class="icon-lines__inner"></span></span>
+          </div>
+          <div class="sec10__col sec10__col_form">
+            <div class="bottom-form-container" id="bottomFormContainer">
+              <p class="s medium mb2">Проверьте, свободен ли ваш город?</p>
+              <form class="bottom-form" data-next="#bigForm" id="bottomForm">
+                <label class="bottom-form__label">
+                  <input class="bottom-form__input" type="text" name="city" placeholder="Ваш город:" required>
+                </label>
+                <label class="bottom-form__label">
+                  <input class="bottom-form__input input_phone" type="text" name="phone" placeholder="Телефон:" required>
+                </label>
+                <label class="bottom-form__label">
+                  <input class="bottom-form__input" type="email" name="email" placeholder="E-mail:" required>
+                </label>
+                <button class="btn-round btn-round_blue bottom-form__btn">Проверить</button><br><br>
+                <div>
+                  <label>
+                    <input type="checkbox" checked required><span class="form__security-text">Нажимая кнопку «Проверить», я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="sec__decor sec10__decor"></div><span class="sec10__icon-lines sec10__icon-lines_top icon-lines"><span class="icon-lines__inner"></span></span>
     </section>
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__block footer__block_social">
-          <p class="footer__text footer__text_copy">© 2017, «Уномоменто»</p>
+          <p class="footer__text footer__text_copy">© 2017, Сеть стоматологических клиник «Мега-дент»</p>
           <div class="footer__social">
-            <p class="footer__text footer__text_social-title">Мы в соц. сетях</p>
+            <p class="footer__text footer__text_social-title">Мы в социальных сетях</p>
             <ul class="footer__social-list">
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-vk"></i></a></li>
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://vk.com/megadent72" target="_blank"><i class="fa fa-vk"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://www.instagram.com/megadent72/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://twitter.com/megadent72" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://ok.ru/stomatologiya.megadent" target="_blank"><i class="fa fa-odnoklassniki"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://plus.google.com/u/0/105003697540944012850" target="_blank"><i class="fa fa-google-plus-official"></i></a></li>
             </ul>
           </div>
         </div>
         <div class="footer__block footer__block_contacts">
-          <p class="footer__text footer__text_adress">Наш офис: Пермь, ул. Шоссе Космонавтов, 111, корпус 2</p>
+          <p class="footer__text footer__text_adress">Наша клиника в г. Тюмень, Артамонова, 13 К1</p>
           <div class="footer__contacts"><a class="footer__text footer__link footer__link_politic" href="doc/politic.pdf" target="_blank">Политика конфиденциальности</a>
-            <p class="footer__text">e-mail:<a class="footer__link" href="mailto:uno@uno-perm.ru">uno@uno-perm.ru</a></p>
+            <!--p.footer__text
+            |e-mail:
+            a(href="mailto:uno@uno-perm.ru").footer__link.
+                uno@uno-perm.ru
+            -->
           </div>
         </div>
-        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:89375260820" data-phone="89375260820">8 937 526-08-20</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
+        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:83452752525" data-phone="83452752525">+7 (3452) 75-25-25</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
+        <div class="footer__decor"></div>
       </div>
     </footer>
     <script src="scripts/vendor.js"></script>
     <script src="scripts/app.js"></script>
+    <!-- Yandex.Metrika counter-->
+    <script type="text/javascript">
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter45430077 = new Ya.Metrika({
+                      id:45430077,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true
+                  });
+              } catch(e) { }
+          });
+      
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+      
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    </script></script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45430077" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter-->
   </body>
 </html>

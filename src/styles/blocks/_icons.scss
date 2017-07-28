@@ -93,6 +93,7 @@ $icon-download-horizon-height: 2px;
     }
 }
 
+$icon-lines-trans: 0.6s ease;
 .icon-lines {
     display: inline-block;
     position: relative;
@@ -114,16 +115,19 @@ $icon-download-horizon-height: 2px;
     }
 
     &:before {
+        transition: 0.7s;
         transform: translateY(-6px);
         left: 0;
     }
 
     &:after {
+        transition: 0.8s;
         transform: translateY(-16px);
         right: 0;
     }
 
     &__inner {
+        transition: 0.9s;
         background-color: white;
         position: absolute;
         left: calc(50% - 1px);
@@ -143,5 +147,16 @@ $icon-download-horizon-height: 2px;
     @include media(w1024) {
         height: 80px;
         width: 12px;
+    }
+
+    &_hide {
+        &:before,
+        &:after {
+            height: 0 !important;
+        }
+
+        .icon-lines__inner {
+            height: 0 !important;
+        }
     }
 }

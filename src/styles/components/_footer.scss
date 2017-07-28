@@ -1,10 +1,16 @@
 .footer {
 	background-color: $footer-bg;
     color: $footer-text;
-    font-size: 14px;
+    font-size: 17px;
     padding: 35px 0 30px;
 
+    @include media(w1024) {
+        font-size: 9px;
+    }
+
     @include media(w768) {
+        font-size: 15px;
+        line-height: 1.8;
         padding: 25px 0 20px;
     }
 
@@ -20,18 +26,25 @@
 
     &__block {
         display: flex;
+        padding: 0 10px;
+        width: calc(100% / 3);
+
+        @include media(w768) {
+            text-align: center;
+            padding: 0;
+        }
 
         &_social {
             flex-direction: column;
             
-            @include media(w1024) {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                order: 3;
-                margin-top: 30px;
-                width: 100%;
-            }
+            // @include media(w1024) {
+            //     flex-direction: row;
+            //     justify-content: space-between;
+            //     align-items: center;
+            //     order: 3;
+            //     margin-top: 30px;
+            //     width: 100%;
+            // }
 
             @include media(w768) {
                 flex-direction: column;
@@ -42,13 +55,14 @@
         &_contacts {
             flex-direction: column;
 
-            @include media(w1024) {
-                order: 1;
-            }
+            // @include media(w1024) {
+            //     order: 1;
+            // }
 
             @include media(w768) {
                 align-items: center;
                 order: 2;
+                margin-bottom: 60px !important;
             }
         }
 
@@ -56,13 +70,13 @@
             flex-direction: column;
             align-items: flex-end;
 
-            @include media(w1024) {
-                order: 2;
-            }
+            // @include media(w1024) {
+            //     order: 2;
+            // }
 
             @include media(w768) {
                 align-items: center;
-                order: 1;
+                order: 3;
             }
         }
 
@@ -74,7 +88,7 @@
 
     &__text {
         margin-bottom: 0;
-        line-height: 1.8;
+        line-height: 1.4;
 
         &_copy {
 
@@ -87,10 +101,6 @@
         &_adress {
             text-align: center;
 
-            @include media(w1024) {
-                text-align: left;
-            }
-
             @include media(w768) {
                 text-align: center;
             }
@@ -101,6 +111,10 @@
         display: flex;
         align-items: center;
         white-space: nowrap;
+
+        @include media(w768) {
+            justify-content: center;
+        }
     }
 
     &__social-list {
@@ -108,15 +122,16 @@
     }
 
     &__social-item {
-        background-color: #9a9a9a;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 14px;
-        margin-right: 4px;
-        height: 24px;
-        width: 24px;
+        font-size: 20px;
+        margin-right: 10px;
+
+        @include media(w1024) {
+            font-size: 14px;
+        }
     }
     
     &__link {
@@ -128,16 +143,15 @@
 
         &:hover {
             border-color: currentColor;
+            color: $main-blue;
         }
 
         &_social {
             border: none;
-            color: white;
         }
 
         &_politic {
             border-bottom: 1px solid currentColor;
-            margin-left: 30px;
 
             @include media(w1024) {
                 margin-left: 10px;
@@ -150,12 +164,19 @@
 
         &_getcall {
             border-bottom: 1px dotted currentColor;
-            font-size: 18px;
+            //font-size: 18px;
+
+            @include media(w768) {
+                border: 2px solid black;
+                padding: 5px 30px;
+                font-size: 20px;
+            }
         }
     }
 
     &__contacts {
         display: flex;
+        justify-content: center;
 
         @include media(w768) {
             flex-direction: column;
@@ -168,10 +189,60 @@
     }
 
     &__phone {
-        font-size: 30px;
+        font-size: 20px;
+        font-weight: 500;
         transition: $trans;
         color: $footer-text;
         line-height: 1;
         text-decoration: none;
+
+        &:hover {
+            color: $decor-light-blue;
+        }
+
+        @include media(w1024) {
+            font-size: 10px;
+        }
+
+        @include media(w768) {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__decor {
+        display: none;
+        position: absolute;
+        top: 40%;
+        left: 0;
+        height: 100px;
+        width: 9%;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+        }
+
+        &:after {
+            transform: skew(30deg) rotate(30deg);
+            background-color: $decor-cyan;
+            left: 0;
+            height: 70%;
+            width: 20%;
+        }
+
+        &:before {
+            transform: skew(-30deg) rotate(-30deg);
+            background-color: $decor-blue;
+            top: 40%;
+            left: 0;
+            height: 50%;
+            width: 60%;
+        }
+
+        @include media(w768) {
+            display: block;
+        }
     }
 }

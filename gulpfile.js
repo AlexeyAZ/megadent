@@ -13,6 +13,7 @@ var plugins = {
         'bower_components/mobile-detect/mobile-detect.min.js',
         'bower_components/rangeslider.js/dist/rangeslider.min.js',
         'bower_components/webshim/js-webshim/minified/polyfiller.js',
+        'bower_components/jQuery-viewport-checker/dist/jquery.viewportchecker.min.js',
     ],
     css: [
         'bower_components/reset-css/reset.css','bower_components/rangeslider.js/dist/rangeslider.css',
@@ -95,6 +96,7 @@ gulp.task('pug', function() {
         gulp.src(properties.folders.build + '/**/*.html')
             .pipe(typograf({
                 locale: ['ru', 'en-US'],
+                disableRule: ['ru/other/phone-number'],
                 enableRule: ["common/nbsp/afterNumber"]
             }))
             .pipe(gulp.dest(properties.folders.build))

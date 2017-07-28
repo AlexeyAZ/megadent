@@ -1,6 +1,6 @@
 .sec5 {
     background-color: $decor-cyan;
-    padding: 80px 0 40px;
+    padding: 80px 0 50px;
     z-index: 1;
 
     @include media(w1024) {
@@ -8,10 +8,12 @@
     }
 
     @include media(w768) {
+        text-align: center;
         padding: 60px 0 50px;
     }
 
     &__title {
+        margin-bottom: 1em;
         padding-right: 50%;
 
         @include media(w768) {
@@ -20,6 +22,8 @@
     }
 
     &__subtitle {
+        text-align: center;
+        margin-bottom: 1em;
         position: relative;
         z-index: 1;
     }
@@ -27,7 +31,7 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
 
         @include media(w768) {
             flex-flow: column;
@@ -36,10 +40,11 @@
     }
 
     &__list-item {
+        transition: $trans;
         border: 6px solid white;
         padding: 20px 10px;
         text-align: center;
-        width: 18%;
+        width: 16%;
 
         @include media(w1024) {
             padding: 20px 5px 10px;
@@ -48,6 +53,10 @@
         @include media(w768) {
             margin-bottom: 20px;
             width: 116px;
+        }
+
+        &:hover {
+            border-color: $decor-light-blue;
         }
     }
 
@@ -63,6 +72,7 @@
     &__list-img {
 
         @include media(w1024) {
+            max-height: 50px;
             max-width: 50px;
         }
     }
@@ -97,7 +107,7 @@
 
         &_text {
             flex-shrink: 1;
-            padding-left: 3%;
+            padding-left: 6%;
             width: 65%;
 
             @include media(w768) {
@@ -167,6 +177,7 @@
 
     &__decor {
         position: absolute;
+        z-index: -1;
 
         &:before,
         &:after {

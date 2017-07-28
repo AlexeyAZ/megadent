@@ -5,51 +5,160 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>Мегадент</title>
-    <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <section class="sec thanks">
-      <header class="header">
-        <div class="container header__container">
-          <div class="header__item"><a class="header__logo" href="/"><img class="header__logo-img" src="img/header-logo.png" alt=""></a></div>
-          <div class="header__item">
-            <p class="xs color-white">730 000 рублей<br> в месяц на голливудских улыбках</p>
+    <div class="form-wrap form-wrap_small">
+      <div class="form-container" id="smallFormContainer">
+        <div class="form__close"></div>
+        <p class="form__heading">Оставьте заявку на презентацию франшизы</p>
+        <form class="form" id="smallForm" data-next="#bigForm">
+          <input class="form__input" type="text" name="name" placeholder="Ваше имя" required="">
+          <input class="form__input input_phone" type="text" name="phone" placeholder="Ваш телефон" required="">
+          <input class="form__input" type="email" name="email" placeholder="Ваш email" required="">
+          <button class="btn-round btn-round_blue form__btn form__btn_size js-big-btn">Скачать</button><br><br>
+          <div>
+            <label>
+              <input type="checkbox" checked required><span class="form__security-text">Нажимая кнопку «Скачать», я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+            </label>
           </div>
-          <div class="header__item header__item_contacts"><a class="header__link phone phone_white" href="tel:89375260820" data-phone="89375260820">8 937 526-08-20</a><a class="header__link link link_getcall js-small-btn" href="">Заказать звонок</a></div>
-        </div>
-      </header>
-      <div class="container">
-        <p class="thanks__heading"><span id="thanksName"></span> менеджеры уже занимаются вашей заявкой</p>
-        <p class="thanks__title">Мы свяжемся с Вами в ближайшее время</p>
-        <div class="thanks__buttons"><a class="btn-round btn-round_download" href="doc/mk.pdf" target="_blank">Открыть презентацию</a><a class="thanks__links-link" href="/index.html">Вернуться на сайт</a></div>
-        <p class="thanks__subtitle">График работы с 9.00 до 23.00 Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий рабочий день</p>
+        </form>
       </div>
+    </div>
+    <div class="form-wrap form-wrap_big">
+      <div class="form-container" id="bigFormContainer">
+        <div class="form__close"></div>
+        <p class="form__title">Спасибо!</p>
+        <p class="form__descr">В ближайшее время мы обработаем Вашу заявку. Для того, чтобы наш специалист мог максимально подробно ответить на все Ваши вопросы, заполните, пожалуйста, следующую форму. Заранее благодарим</p>
+        <form class="form" method="POST" id="bigForm">
+          <input class="js-hidden-name" type="hidden" name="name1">
+          <input class="js-hidden-phone" type="hidden" name="phone1">
+          <input class="js-hidden-phone" type="hidden" name="email1">
+          <label class="form__label"><span>Введите Ваш город</span>
+            <input class="form__input" type="text" name="city" placeholder="" required="">
+          </label>
+          <label class="form__label"><span>Введите Ваш возраст</span>
+            <input class="form__input" type="text" name="age" placeholder="" required="">
+          </label>
+          <label class="form__label"><span>Наличие бизнеса / Опыт бизнеса</span>
+            <select class="form__select" name="business">
+              <option value="yes">Да</option>
+              <option value="no">Нет</option>
+            </select>
+          </label>
+          <label class="form__label"><span>Объем планируемых инвестиций</span>
+            <select class="form__select" name="volume">
+              <option value="100 000 - 250 000">100 000 — 250 000 рублей</option>
+              <option value="250 000 - 500 000">250 000 — 500 000 рублей</option>
+              <option value="500 000 - 750 000">500 000 — 750 000 рублей</option>
+              <option value="750 000 - 1 000 000">750 000 — 1 000 000 рублей</option>
+              <option value="1 000 000 - 1 500 000">1 000 000 — 1 500 000 рублей</option>
+              <option value="1 500 000 - 3 000 000">1 500 000 — 3 000 000 рублей</option>
+              <option value="3 000 000">Более 3 000 000 рублей</option>
+            </select>
+          </label>
+          <button class="btn-round btn-round_blue form__btn form__btn_center form__btn_big">Проверить</button><br><br>
+          <div>
+            <label>
+              <input type="checkbox" checked required><span class="form__security-text">Нажимая кнопку «Скачать», я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section class="sec thanks">
+      <div class="container color-white">
+        <div class="sec1__row">
+          <div class="sec1__col sec1__col_left">
+            <div class="sec1__logo"><img class="sec1__logo-img" src="img/header-logo.png" alt=""></div>
+          </div>
+          <div class="sec1__col sec1__col_right thanks__col-right">
+            <div class="sec1__info thanks__info">
+              <div class="sec1__info-title">730 000 рублей<br class="br-pc"> в месяц<br class="br-phone"> на голливудских улыбках</div>
+              <div class="sec1__info-contacts"><a class="phone" href="tel:83452752525" data-phone="83452752525">+7 (3452) 75-25-25</a><a class="link link_getcall js-small-btn" href="">Заказать звонок</a></div>
+            </div>
+            <p class="thanks__heading ff-geometria bold"><span id="thanksName"></span> менеджеры уже занимаются вашей заявкой</p>
+            <p class="thanks__title">Мы свяжемся с Вами в ближайшее время</p>
+            <p class="thanks__subtitle">График работы: с 9 00 до 18 00 Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий день</p>
+            <div class="thanks__buttons"><a class="btn-round thanks__buttons-btn" href="doc/mk.pdf" target="_blank">Открыть презентацию</a><a class="btn-round btn-round_blue thanks__buttons-btn thanks__buttons-btn_back" href="/index.html">Вернуться на сайт</a></div>
+          </div>
+        </div>
+      </div>
+      <!--div.container
+      p.thanks__heading.
+          <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
+      p.thanks__title.
+          Мы свяжемся с Вами в ближайшее время
+      div.thanks__buttons
+          a(href="doc/mk.pdf" target="_blank").btn-round.btn-round_download.
+              Открыть презентацию
+          a(href="/index.html").thanks__links-link.
+              Вернуться на сайт
+      p.thanks__subtitle.
+          График работы с 9.00 до 23.00 Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий рабочий день
+      -->
     </section>
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__block footer__block_social">
-          <p class="footer__text footer__text_copy">© 2017, «Уномоменто»</p>
+          <p class="footer__text footer__text_copy">© 2017, Сеть стоматологических клиник «Мега-дент»</p>
           <div class="footer__social">
-            <p class="footer__text footer__text_social-title">Мы в соц. сетях</p>
+            <p class="footer__text footer__text_social-title">Мы в социальных сетях</p>
             <ul class="footer__social-list">
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-vk"></i></a></li>
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li class="footer__social-item"><a class="footer__link footer__link_social" href="" target="_blank"><i class="fa fa-tripadvisor"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://vk.com/megadent72" target="_blank"><i class="fa fa-vk"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://www.instagram.com/megadent72/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://twitter.com/megadent72" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://ok.ru/stomatologiya.megadent" target="_blank"><i class="fa fa-odnoklassniki"></i></a></li>
+              <li class="footer__social-item"><a class="footer__link footer__link_social" href="https://plus.google.com/u/0/105003697540944012850" target="_blank"><i class="fa fa-google-plus-official"></i></a></li>
             </ul>
           </div>
         </div>
         <div class="footer__block footer__block_contacts">
-          <p class="footer__text footer__text_adress">Наш офис: Пермь, ул. Шоссе Космонавтов, 111, корпус 2</p>
+          <p class="footer__text footer__text_adress">Наша клиника в г. Тюмень, Артамонова, 13 К1</p>
           <div class="footer__contacts"><a class="footer__text footer__link footer__link_politic" href="doc/politic.pdf" target="_blank">Политика конфиденциальности</a>
-            <p class="footer__text">e-mail:<a class="footer__link" href="mailto:uno@uno-perm.ru">uno@uno-perm.ru</a></p>
+            <!--p.footer__text
+            |e-mail:
+            a(href="mailto:uno@uno-perm.ru").footer__link.
+                uno@uno-perm.ru
+            -->
           </div>
         </div>
-        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:89375260820" data-phone="89375260820">8 937 526-08-20</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
+        <div class="footer__block footer__block_feedback"><a class="footer__phone" href="tel:83452752525" data-phone="83452752525">+7 (3452) 75-25-25</a><a class="footer__link footer__link_getcall js-small-btn">Заказать звонок</a></div>
+        <div class="footer__decor"></div>
       </div>
     </footer>
     <script src="scripts/vendor.js"></script>
     <script src="scripts/app.js"></script>
+    <!-- Yandex.Metrika counter-->
+    <script type="text/javascript">
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter45430077 = new Ya.Metrika({
+                      id:45430077,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true
+                  });
+              } catch(e) { }
+          });
+      
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+      
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    </script></script>
+<noscript><div><img src="https://mc.yandex.ru/watch/45430077" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter-->
   </body>
 </html>

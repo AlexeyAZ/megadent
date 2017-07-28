@@ -2,6 +2,23 @@
 
 $(function () {
 
+    function addStartClass(el, className) {
+        $(el).addClass(className);
+    }
+
+    if (!window.matchMedia("(max-width:768px)").matches) {
+        addStartClass(".icon-lines", "icon-lines_hide");
+        addStartClass(".sec__decor", "sec__decor_hide");
+
+        $('.icon-lines').viewportChecker({
+            classToRemove: 'icon-lines_hide'
+        });
+
+        $('.sec__decor').viewportChecker({
+            classToRemove: 'sec__decor_hide'
+        });
+    }
+
     var body = $("body");
     var thanksLocation = "thanks.html";
     var wlLand = false;
@@ -38,7 +55,19 @@ $(function () {
     $("input[name=phone]").inputmask({
         "mask": "+9(999)999-9999",
         greedy: false,
-        clearIncomplete: true
+        clearIncomplete: true,
+        "oncomplete": function () {
+            $(this).addClass("input_success");
+        },
+        onKeyDown: function (event, buffer, caretPos, opts) {
+
+            if (buffer[buffer.length - 1] === "_") {
+                $(this).removeClass("input_success");
+            } else {
+                $(this).addClass("input_success");
+            }
+        }
+
     });
 
     body.on("click", ".js-small-btn", function (e) {
@@ -137,19 +166,19 @@ $(function () {
 
         name = selfName.val();
 
-        if (wlLand === false) {
+        //if (wlLand === false) {
 
-            $.ajax({
-                type: "POST",
-                url: "php/send.php",
-                data: formData,
-                success: function () {
-                    window.location = thanksLocation;
-                }
-            });
-        } else {
-            window.location = thanksLocation;
-        }
+        $.ajax({
+            type: "POST",
+            url: "php/send.php",
+            data: formData,
+            success: function () {
+                window.location = thanksLocation;
+            }
+        });
+        // } else {
+        //     window.location = thanksLocation;
+        // }
 
         if (name) {
             localStorage.setItem("landclientname", name + ", наши");

@@ -26,7 +26,7 @@ a {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    padding: 0 45px;
+    padding: 0 45px 4px 45px;
     height: $btn-height-pc;
 
     @include media (w1024) {

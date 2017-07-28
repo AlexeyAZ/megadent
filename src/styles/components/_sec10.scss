@@ -1,3 +1,173 @@
 .sec10 {
     
+    @include media(w768) {
+        text-align: center;
+    }
+
+    &:before {
+        content: "";
+        background-image: url("../img/sec10-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+
+        @include media (w768) {
+            background-image: none;
+        }
+    }
+    
+    &__row {
+        display: flex;
+
+        @include media (w768) {
+            display: block;
+        }
+    }
+
+    &__col {
+        position: relative;
+        width: 50%;
+
+        &_border {
+            padding: 100px 0 180px;
+
+            @include media (w1024) {
+                padding: 70px 0 120px;
+            }
+
+            @include media (w768) {
+                background-image: url("../img/sec10-bg.jpg");
+                margin-left: -$container-side-padding-tablet;
+                margin-right: -$container-side-padding-tablet;
+                padding-top: 100px;
+                padding-bottom: 70px;
+                padding-left: $container-side-padding-tablet;
+                padding-right: $container-side-padding-tablet;
+            }
+        }
+
+        &_form {
+            padding-top: 120px;
+            padding-bottom: 30px;
+
+            @include media (w1024) {
+                padding-top: 80px;
+            }
+
+            @include media (w768) {
+                padding: 70px 0;
+            }
+        }
+
+        @include media (w768) {
+            width: auto;
+        }
+    }
+
+    &__border {
+        border: 6px solid white;
+        border-right: none;
+        padding: 40px 30px 70px 50px;
+        position: relative;
+
+        &:after {
+            content: "";
+            border: 6px solid $main-blue;
+            border-left: none;
+            position: absolute;
+            top: -6px;
+            bottom: -6px;
+            left: 100%;
+            width: 60px;
+
+            @include media(w1366) {
+                width: 40px;
+            }
+
+            @include media(w1024) {
+                border-width: 3px;
+                top: -3px;
+                bottom: -3px;
+            }
+
+            @include media (w768) {
+                content: none;
+            }
+        }
+
+        @include media(w1024) {
+            border-width: 3px;
+        }
+
+        @include media(w768) {
+            border-right: 3px solid white;
+            text-align: center;
+        }
+    }
+
+    &__decor {
+        display: none;
+        position: absolute;
+        top: 2%;
+        right: 0;
+        height: 100px;
+        width: 9%;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+        }
+
+        &:after {
+            transform: skew(30deg) rotate(30deg);
+            background-color: $decor-cyan;
+            right: 0;
+            height: 70%;
+            width: 30%;
+        }
+
+        &:before {
+            transform: skew(-30deg) rotate(-30deg);
+            background-color: $decor-light-blue;
+            top: 70%;
+            right: 0;
+            height: 40%;
+            width: 50%;
+        }
+
+        @include media(w768) {
+            display: block;
+        }
+    }
+
+    &__icon-lines {
+        transform: rotate(45deg);
+        display: none;
+        position: absolute;
+        
+        &_top {
+            top: 30px;
+            right: 40px;
+        }
+
+        &_border {
+            top: -20px;
+            left: -20px;
+        }
+
+        &_bottom {
+            bottom: -40px;
+            left: 40%;
+        }
+
+        @include media(w768) {
+            display: block;
+        }
+    }
 }

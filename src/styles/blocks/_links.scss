@@ -7,9 +7,14 @@ a {
     text-decoration: none;
 
     &_getcall {
+        transition: $trans;
         border-bottom: 2px dotted currentColor;
         color: white;
         font-size: 18px;
+
+        &:hover {
+            color: $decor-cyan;
+        }
 
         @include media(w1280) {
             font-size: 16px;
@@ -24,6 +29,10 @@ a {
             padding: 10px 30px;
             font-size: 20px;
             font-weight: 500;
+            
+            &:hover {
+                border-color: currentColor;
+            }
         }
     }
 }

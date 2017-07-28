@@ -1,13 +1,14 @@
 .sec3 {
     background-color: $blue-bg;
     overflow: hidden;
-    padding: 60px 0;
+    padding: 60px 0 90px;
 
     @include media(w1024) {
         padding: 40px 0 8%;
     }
 
     @include media(w768) {
+        text-align: center;
         padding-bottom: 60px;
     }
 
@@ -79,7 +80,7 @@
         }
 
         &_small {
-            transform: translate(40%, 40%);
+            transform: translate(40%, 25%);
             position: absolute;
             right: 0;
             bottom: 0;

@@ -1,10 +1,18 @@
 div#bottomFormContainer.bottom-form-container
+    p.s.medium.mb2.
+        Проверьте, свободен ли ваш город?
     form(data-next="#bigForm")#bottomForm.bottom-form
         label.bottom-form__label
-            input(type="text" name="city" placeholder="Ваш город" required).input.input_city
+            input(type="text" name="city" placeholder="Ваш город:" required).bottom-form__input
         label.bottom-form__label
-            input(type="text" name="phone" placeholder="Телефон" required).input.input_phone
+            input(type="text" name="phone" placeholder="Телефон:" required).bottom-form__input.input_phone
         label.bottom-form__label
-            input(type="email" name="email" placeholder="E-mail" required).input
-        button.btn-round.bottom-form__btn.
+            input(type="email" name="email" placeholder="E-mail:" required).bottom-form__input
+        button.btn-round.btn-round_blue.bottom-form__btn.
             Проверить
+        <br><br>
+        div
+            label
+                input(type="checkbox" checked required)
+                span.form__security-text.
+                    Нажимая кнопку "Проверить", я даю согласие на обработку персональных данных и соглашаюсь с <a class="form__security-link" href="doc/politic.pdf" target="_blank">политикой конфиденциальности</a>

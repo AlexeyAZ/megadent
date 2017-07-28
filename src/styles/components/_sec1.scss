@@ -5,6 +5,10 @@ $sec1-col-left: 45%;
     background-position: left center;
     overflow: hidden;
 
+    @include media(w768) {
+        text-align: center;
+    }
+
     &__row {
         display: flex;
 
@@ -83,17 +87,29 @@ $sec1-col-left: 45%;
         font-size: 26px;
         line-height: 1;
 
+        span {
+            font-size: 22px;
+        }
+
         @include media(w1280) {
             font-size: 22px;
         }
 
         @include media(w1024) {
             font-size: 14px;
+
+            span {
+                font-size: 11px;
+            }
         }
 
         @include media(w768) {
             font-size: 20px;
             margin-bottom: 1em;
+
+            span {
+                font-size: 20px;
+            }
         }
 
         // @include media(w1280) {
@@ -117,7 +133,10 @@ $sec1-col-left: 45%;
     }
 
     &__subtitle {
-        text-align: center;
+        
+        @include media(w768) {
+            text-align: center;
+        }
     }
 
     &__icon-lines {

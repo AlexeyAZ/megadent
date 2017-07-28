@@ -140,6 +140,7 @@ $form-input-padding: 25px;
     &__btn {
         position: relative;
         font-size: 22px;
+        height: 62px;
 
         &_center {
             display: block;
@@ -165,6 +166,10 @@ $form-input-padding: 25px;
                     left: calc(100% + 20px);
                 }
             }
+        }
+
+        &_big {
+            width: 100%;
         }
     }
 }

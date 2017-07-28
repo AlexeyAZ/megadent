@@ -4,9 +4,34 @@ block vars
     - var title = 'Мегадент'
 
 block content
+    include components/form
     section.sec.thanks
-        include components/header
-        div.container
+        div.container.color-white
+            div.sec1__row
+                div.sec1__col.sec1__col_left
+                    div.sec1__logo
+                        img(src="img/header-logo.png", alt="").sec1__logo-img
+                div.sec1__col.sec1__col_right.thanks__col-right
+                    div.sec1__info.thanks__info
+                        div.sec1__info-title.
+                            730 000 рублей<br class="br-pc"> в месяц<br class="br-phone"> на голливудских улыбках
+                        div.sec1__info-contacts
+                            a(href="tel:" + attrPhone)&attributes({'data-phone': attrPhone}).phone.
+                                #{phone}
+                            a(href="").link.link_getcall.js-small-btn.
+                                Заказать звонок
+                    p.thanks__heading.ff-geometria.bold.
+                        <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
+                    p.thanks__title.
+                        Мы свяжемся с Вами в ближайшее время
+                    p.thanks__subtitle.
+                        График работы: с 9 00 до 18 00 Поэтому, если вы оставили заявку в нерабочее время, мы перезвоним вам на следующий день
+                    div.thanks__buttons
+                        a(href="doc/mk.pdf" target="_blank").btn-round.thanks__buttons-btn.
+                            Открыть презентацию
+                        a(href="/index.html").btn-round.btn-round_blue.thanks__buttons-btn.thanks__buttons-btn_back.
+                            Вернуться на сайт
+        //div.container
             p.thanks__heading.
                 <span id="thanksName"></span> менеджеры уже занимаются вашей заявкой
             p.thanks__title.
